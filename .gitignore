@@ -1,38 +1,23 @@
-# Compiled source #
-###################
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.so
+import random
+import time
+import os
 
-# Packages #
-############
-# it's better to unpack these files and commit the raw source
-# git has its own built in compression methods
-*.7z
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
+print("¿Quieres ser mi novia?")
+respuesta = input("Sí / No: ")
 
-# Logs and databases #
-######################
-*.log
-*.sql
-*.sqlite
-
-# OS generated files #
-######################
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
+if respuesta.lower() == "sí":
+    os.system('cls' if os.name == 'nt' else 'clear')  # Limpiar la pantalla
+    print("Yo sabía que querías...")
+    time.sleep(1)
+    print("Sí, estamos destinados a estar juntos...")
+    time.sleep(1)
+    print("Una y otra vez...")
+    time.sleep(2)
+    print("¡TE AMO!")
+elif respuesta.lower() == "no":
+    for _ in range(10):
+        os.system('cls' if os.name == 'nt' else 'clear')  # Limpiar la pantalla
+        print(" " * random.randint(0, 20) + "NO")
+        time.sleep(0.5)  # Pausa de medio segundo
+else:
+    print("No entiendo tu respuesta. ¿Podrías responder con 'Sí' o 'No'?")
